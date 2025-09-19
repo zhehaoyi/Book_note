@@ -1,0 +1,95 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[most,breakable]{tcolorbox}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+% 页面设置
+\geometry{margin=1in}
+\setstretch{1.25}
+
+% 颜色定义
+\definecolor{myblue}{RGB}{30,90,150}
+\definecolor{mygray}{RGB}{240,240,240}
+
+% 超链接颜色
+\hypersetup{
+  colorlinks=true,
+  linkcolor=myblue,
+  urlcolor=myblue
+}
+
+% 美观标题
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\Huge\color{myblue}}
+  {\filleft\Large\chaptertitlename\ \thechapter}
+  {2ex}
+  {\titlerule\vspace{2ex}\filright}
+  [\vspace{2ex}\titlerule]
+
+\titleformat{\section}
+  {\Large\bfseries\color{myblue}}
+  {\thesection}{1em}{}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+
+% 漂亮的笔记框
+\newtcolorbox{notebox}[1][]{
+  colback=mygray,
+  colframe=myblue,
+  fonttitle=\bfseries,
+  title=#1,
+  sharp corners,
+  boxrule=1pt,
+  breakable
+}
+
+% 封面
+\title{Note of \textit{Principles of Communications}}
+\author{Zhehao Yi}
+\date{Sep 18. 2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% 示例章节
+\chapter{Chapter 1: Introduction}
+\section{}
+\begin{notebox}[Summary]
+some summary
+\end{notebox}
+
+\section{}
+\begin{notebox}[Thinking]
+some thinking
+\end{notebox}
+
+\chapter{Chapter 2:}
+\section{}
+\begin{notebox}[Summary]
+some summary
+\end{notebox}
+
+\section{}
+\begin{notebox}[Concept]
+some concept 
+\end{notebox}
+
+\section{}
+\begin{notebox}[Thinking]
+some thinking
+\end{notebox}
+
+\end{document}
