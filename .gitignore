@@ -21,9 +21,6 @@
 *.fdb_latexmk
 *.fls
 
-# PDF outputs
-*.pdf
-
 # Backup files
 *.bak
 *~
