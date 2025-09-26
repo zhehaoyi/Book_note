@@ -181,9 +181,52 @@ The technological breakthroughs that proceeded the widespread use of light waves
 \section{Summary of System-Analysis Techniques}
 \subsection{Time and Frequency-domain Analyses}
 
+Dual time-frequency analysis techniques are especially valuable for liner system for which the principle of superposition holds.
+
 \subsection{Modulation and Communication Theories}
 
+Modulation theory employs time and frequency-domain analyses to analyze and design system for modulation and demodulation
+of information-bearing signals.
+
+Consider the message signal $m(t)$, which is to be transmitted through a channel using method of double-sideband modulation.
+The modulation carrier for double-sideband modulation is of the form $x_c(t) = A_cm(t)cos\omega_ct$, where $\omega_c$ is the carrier frequency in radians per second and $A_c$ is the amplitude.
+
+Not only must a modulator be built that can multiply two signals, but amplifiers are required to provide the proper power level of transmitted signal.
+
+The frequency content of the modulated carrier, is important to their design and therefore must be specified. The dual time-frequency analysis approach is especially helpful in providing such information.
+
+The application of probabilistic methods, coupled with optimization procedures, has been one of the key ingredients of the modern communications era and led to the development during the latter half of the 
+twentieth century of new techniques and systems totally different in concept from those that existed before World War II
+
 \section{Probabilistic Approaches to System Optimization}
+\subsection{Statistical Signal Detection and Estimation Theory}
+
+\textit{Wiener filter}: used in the sense of minimizing the average squared error between the desired and the actual output.
+
+\textit{Matched filter}: used in maximize the peak-signal-to-root-mean-square (rms)-noise ration at its output.
+
+\textit{Adaptive filter}: adaption of the Wiener and matched-filter ideas to time-varying backgrounds.
+
+The signal-extraction approaches of Wiener and North, called \textit{Statistical signal detection} and \textit{Estimation theory}.
+
+In considering the design of receivers utilizing \textit{all} the information available at the channel output, determined that this so-called
+ideal receiver computes the probabilities of the received waveform given the possible transmitted message. These computed probabilities are known as a \textit{posteriori} probabilities.
+The ideal receiver then, makes the decision that the transmitted message was the one corresponding to the largest a \textit{posterior} probability.
+
+Although perhaps somewhat vague at this point, this \textit{maximum a posteriori} (MAP) principle, as it is called, is one of the cornerstones of detection and estimation theory.
+\subsection{Information Theory and Coding}
+
+Once a suitable measure has been defined, the next step is to define the information carrying capacity, or simply capacity, of a channedl as the maximum rate at which information can be conveyed through it.
+
+\textit{Shannon's second theorem}: By suitably restructuring the transmitted signal, we can transmit information through a channel \textit{at any rate less than the channel capacity with arbitrarily small error}, despite the presence of noise, provide
+we have an arbitrarily long time available for transmission.
+
+May suitable codes exist, \textit{but we are not told how to find these codes}.
+
+\subsection{Recent Advances}
+
+Turbo-information procession (used in decoding turbo codes among other applications), and multiple-input multiple-output (MIMO) communications theory, which
+is expected to have far-reaching impact on wireless local- and wide-area network development.
 \begin{notebox}[Summary]
 some summary
 \end{notebox}
